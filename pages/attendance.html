@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance | Synear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/attendance.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../asset/logo.png" alt="logo" class="logo-full">
+            </a>
+            <a href="my-registration.html" class="btn btn-outline-primary">
+                Back
+            </a>
+        </div>
+    </nav>
+    <section class="attendance-section">
+        <div class="attendance-card">
+            <span class="login-badge">
+                EVENT ATTENDANCE
+            </span>
+            <h2>Attendance Check-In</h2>
+            <p>
+                Show this QR Code to the committee when you arrive at the seminar venue.
+            </p>
+            <div class="seminar-box">
+                <h5 id="seminarTitle">
+                    UI/UX Design Seminar
+                </h5>
+
+                <span id="seminarDate">
+                    12 July 2026
+                </span>
+            </div>
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <div class="attendance-code">
+
+                <label class="form-label">
+                    Attendance Code
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="attendanceCode"
+                    placeholder="Enter attendance code (Optional)">
+            </div>
+            <small class="text-muted d-block mt-2">
+                Leave the code empty if your QR Code has been scanned by the committee.
+            </small>
+
+            <div class="status-box">
+
+                <span>Status</span>
+
+                <strong id="attendanceStatus">
+                    Not Checked In
+                </strong>
+
+            </div>
+
+            <button class="btn btn-login-main w-100" id="completeAttendance">
+                Complete Attendance
+            </button>
+            <div class="status-box">
+                <span>Status</span>
+                <strong id="attendanceStatus">
+                    Not Checked In
+                </strong>
+            </div>
+            <button class="btn btn-login-main w-100" id="checkInBtn">
+                Check In
+            </button>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="../js/attendance.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

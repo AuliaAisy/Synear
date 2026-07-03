@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Seminar | Synear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/explore.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../asset/logo.png" alt="logo" class="logo-full">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto me-4">
+                    <li class="nav-item"><a class="nav-link" href="../pages/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../pages/explore.html">Explore</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-icon">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="btn btn-icon position-relative">
+                        <i class="bi bi-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <div id="authArea">
+                        <a href="login.html" class="btn btn-login">Login</a>
+                        <a href="register.html" class="btn btn-register">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!--==========================================
+EXPLORE HERO
+===========================================-->
+<section class="explore-hero">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="section-subtitle">EXPLORE EVENTS</span>
+                <h1>Find The Perfect Seminar For Your Career</h1>
+                <p>Discover inspiring seminars from trusted organizers to grow your knowledge and career.</p>
+            </div>
+        </div>
+
+        <div class="explore-search">
+            <div class="row g-3 align-items-end">
+
+                <div class="col-lg-3">
+                    <label>Keyword</label>
+                    <input type="text" id="keyword" class="form-control" placeholder="Search seminar...">
+                </div>
+
+                <div class="col-lg-3">
+                    <label>Category</label>
+                    <select id="category" class="form-select">
+                        <option>All Categories</option>
+                        <option>Seminar</option>
+                        <option>Workshop</option>
+                        <option>Bootcamp</option>
+                        <option>Webinar</option>
+                        <option>Business</option>
+                        <option>Technology</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-2">
+                    <label>Location</label>
+                    <select id="location" class="form-select">
+                        <option>All Cities</option>
+                        <option>Online</option>
+                        <option>Bandung</option>
+                        <option>Surabaya</option>
+                        <option>Jakarta</option>
+                        <option>Yogyakarta</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-2">
+                    <label>Date</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+
+                <div class="col-lg-1">
+                    <button id="searchBtn" class="btn btn-primary-custom w-100">
+                        <i class="bx bx-search"></i>
+                    </button>
+                </div>
+
+                <div class="col-lg-1">
+                    <button id="resetBtn" class="btn btn-outline-secondary w-100">
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIST SEMINAR DI SINI -->
+<!--==========================================
+EXPLORE RESULT
+===========================================-->
+<section class="explore-result">
+    <div class="container">
+        <div class="result-top">
+            <h4>Popular Seminars</h4>
+            <span id="resultCount" class="result-count">Showing 6 Events</span>
+        </div>
+
+        <div class="row g-4" id="eventList">
+
+            <!-- CARD 1 -->
+            <div class="col-lg-4 col-md-6 event-item"
+                data-title="UI UX Design Bootcamp"
+                data-category="Bootcamp"
+                data-location="Jakarta"
+                data-date="2026-07-12">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80" alt="">
+                    <div class="event-content">
+                        <span class="event-category">Bootcamp</span>
+                        <h5>UI / UX Design Bootcamp</h5>
+                        <p>Learn UI/UX design from industry experts through hands-on projects.</p>
+
+                        <div class="event-meta">
+                            <span><i class="bx bx-calendar"></i> 12 Jul 2026</span>
+                            <span><i class="bx bx-map"></i> Jakarta</span>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">Rp149.000</div>
+                            <a href="detail.html" class="btn btn-primary-custom">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-lg-4 col-md-6 event-item"
+                data-title="Entrepreneur Summit 2026"
+                data-category="Business"
+                data-location="Bandung"
+                data-date="2026-08-05">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&auto=format&fit=crop&q=80" alt="">
+                    <div class="event-content">
+                        <span class="event-category">Business</span>
+                        <h5>Entrepreneur Summit 2026</h5>
+                        <p>Build your startup with successful founders and experienced mentors.</p>
+
+                        <div class="event-meta">
+                            <span><i class="bx bx-calendar"></i> 05 Aug 2026</span>
+                            <span><i class="bx bx-map"></i> Bandung</span>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">Rp199.000</div>
+                            <a href="#"
+                                class="btn btn-primary-custom register-btn"
+                                data-title="Digital Marketing Seminar"
+                                data-price="149000"
+                                data-date="20 July 2026"
+                                data-type="paid">
+                                    Register Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-lg-4 col-md-6 event-item"
+                data-title="Cyber Security Conference"
+                data-category="Technology"
+                data-location="Surabaya"
+                data-date="2026-08-18">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80" alt="">
+                    <div class="event-content">
+                        <span class="event-category">Technology</span>
+                        <h5>Cyber Security Conference</h5>
+                        <p>Discover the latest cyber security trends and digital protection.</p>
+
+                        <div class="event-meta">
+                            <span><i class="bx bx-calendar"></i> 18 Aug 2026</span>
+                            <span><i class="bx bx-map"></i> Surabaya</span>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">Rp179.000</div>
+                            <a href="detail.html" class="btn btn-primary-custom">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-lg-4 col-md-6 event-item"
+                data-title="Digital Marketing Workshop"
+                data-category="Workshop"
+                data-location="Online"
+                data-date="2026-07-20">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop&q=80" alt="">
+                    <div class="event-content">
+                        <span class="event-category">Workshop</span>
+                        <h5>Digital Marketing Workshop</h5>
+                        <p>Master SEO, social media marketing and paid advertising.</p>
+
+                        <div class="event-meta">
+                            <span><i class="bx bx-calendar"></i> 20 Jul 2026</span>
+                            <span><i class="bx bx-map"></i> Online</span>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">Rp129.000</div>
+                            <a href="detail.html" class="btn btn-primary-custom">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col-lg-4 col-md-6 event-item"
+                data-title="AI Future Conference"
+                data-category="Technology"
+                data-location="Jakarta"
+                data-date="2026-07-22">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop&q=80" alt="">
+                    <div class="event-content">
+                        <span class="event-category">Technology</span>
+                        <h5>AI Future Conference</h5>
+                        <p>Explore Artificial Intelligence and the future of technology.</p>
+
+                        <div class="event-meta">
+                            <span><i class="bx bx-calendar"></i> 22 Jul 2026</span>
+                            <span><i class="bx bx-map"></i> Jakarta</span>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">Rp249.000</div>
+                            <a href="detail.html" class="btn btn-primary-custom">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col-lg-4 col-md-6 event-item"
+                data-title="Public Speaking Class"
+                data-category="Seminar"
+                data-location="Yogyakarta"
+                data-date="2026-07-25">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?w=1200&auto=format&fit=crop&q=80" alt="">
+                    <div class="event-content">
+                        <span class="event-category">Seminar</span>
+                        <h5>Public Speaking Class</h5>
+                        <p>Improve your confidence and presentation skills effectively.</p>
+
+                        <div class="event-meta">
+                            <span><i class="bx bx-calendar"></i> 25 Jul 2026</span>
+                            <span><i class="bx bx-map"></i> Yogyakarta</span>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">Rp99.000</div>
+                            <a href="detail.html" class="btn btn-primary-custom">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item active"><a class="page-link">1</a></li>
+                <li class="page-item"><a class="page-link">2</a></li>
+                <li class="page-item"><a class="page-link">3</a></li>
+                <li class="page-item"><a class="page-link"><i class="bx bx-chevron-right"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-circle">S</div>
+                        <span>Synear</span>
+                    </a>
+
+                    <p class="footer-description">
+                        Modern seminar platform designed to help students and professionals discover quality events and earn verified certificates.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Platform</h5>
+
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Support</h5>
+
+                    <ul class="footer-menu">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+
+                    <p>Get updates about upcoming seminars and exclusive events.</p>
+
+                    <div class="newsletter-box">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary-custom">Subscribe</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+                <p>© 2026 Synear. All Rights Reserved.</p>
+                <span>Designed with ❤️ by Synear Team.</span>
+            </div>
+
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/explore.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

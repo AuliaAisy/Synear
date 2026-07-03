@@ -1,141 +1,167 @@
 //==========================================
 // TAB
 //==========================================
-const scanTab=document.getElementById("scanTab");
-const codeTab=document.getElementById("codeTab");
+const scanTab = document.getElementById("scanTab");
+const codeTab = document.getElementById("codeTab");
 
-const scanContent=document.getElementById("scanContent");
-const codeContent=document.getElementById("codeContent");
+const scanContent = document.getElementById("scanContent");
+const codeContent = document.getElementById("codeContent");
 
-scanTab.addEventListener("click",function(){
+scanTab.addEventListener("click", () => {
 
     scanTab.classList.add("active");
     codeTab.classList.remove("active");
 
-    scanContent.style.display="block";
-    codeContent.style.display="none";
+    scanContent.style.display = "block";
+    codeContent.style.display = "none";
 
 });
 
-codeTab.addEventListener("click",function(){
+codeTab.addEventListener("click", () => {
 
     codeTab.classList.add("active");
     scanTab.classList.remove("active");
 
-    scanContent.style.display="none";
-    codeContent.style.display="block";
+    scanContent.style.display = "none";
+    codeContent.style.display = "block";
 
 });
 
 //==========================================
-// LOAD SEMINAR
+// SEMINAR DATA
 //==========================================
-const registrations=JSON.parse(localStorage.getItem("registrations"))||[];
+const registrations = JSON.parse(localStorage.getItem("registrations")) || [];
+let seminar = null;
+const seminarData = {
 
-let seminar=null;
+    "UI/UX Design Seminar": {
+        code: "UIUX2026",
+        qr: "SYNEAR-UIUX2026"
+    },
 
-if(registrations.length>0){
+    "Public Speaking Seminar": {
+        code: "SPEAK2026",
+        qr: "SYNEAR-SPEAK2026"
+    },
 
-    seminar=registrations[registrations.length-1];
+    "Data Science Seminar": {
+        code: "DATA2026",
+        qr: "SYNEAR-DATA2026"
+    },
 
-    document.getElementById("seminarTitle").textContent=seminar.title;
-    document.getElementById("seminarDate").textContent=seminar.date;
+    "Digital Marketing Seminar": {
+        code: "DM2026",
+        qr: "SYNEAR-DM2026"
+    },
+
+    "Cyber Security Seminar": {
+        code: "CYBER2026",
+        qr: "SYNEAR-CYBER2026"
+    },
+
+    "Business Innovation Seminar": {
+        code: "BIZ2026",
+        qr: "SYNEAR-BIZ2026"
+    }
+
+};
+
+if (registrations.length > 0) {
+
+    seminar = registrations[registrations.length - 1];
+
+    document.getElementById("seminarTitle").textContent = seminar.title;
+    document.getElementById("seminarDate").textContent = seminar.date;
 
 }
 
 //==========================================
-// ATTENDANCE CODE
-//==========================================
-const attendanceCodes={
-    "UI/UX Design Seminar":"UIUX2026",
-    "Public Speaking Seminar":"SPEAK2026",
-    "Data Science Seminar":"DATA2026",
-    "Digital Marketing Seminar":"DM2026",
-    "Cyber Security Seminar":"CYBER2026",
-    "Business Innovation Seminar":"BIZ2026"
-};
-//==========================================
 // QR SCANNER
 //==========================================
-const seminarQR={
-    "UI/UX Design Seminar":"SYNEAR|UIUX2026",
-    "Public Speaking Seminar":"SYNEAR|SPEAK2026",
-    "Data Science Seminar":"SYNEAR|DATA2026",
-    "Digital Marketing Seminar":"SYNEAR|DM2026",
-    "Cyber Security Seminar":"SYNEAR|CYBER2026",
-    "Business Innovation Seminar":"SYNEAR|BIZ2026"
-};
+let html5QrCode;
 
-let scanner=null;
+if (document.getElementById("reader")) {
 
-if(document.getElementById("reader")){
+    html5QrCode = new Html5Qrcode("reader");
 
-    scanner=new Html5Qrcode("reader");
+    Html5Qrcode.getCameras().then(cameras => {
 
-    Html5Qrcode.getCameras().then(function(){
+        if (cameras.length > 0) {
 
-        scanner.start(
-            {
-                facingMode:"environment"
-            },
-            {
-                fps:10,
-                qrbox:220
-            },
-            function(decodedText){
+            html5QrCode.start(
 
-                const expectedQR=seminarQR[seminar.title];
+                cameras[0].id,
 
-                if(decodedText===expectedQR){
+                {
+                    fps: 10,
+                    qrbox: 220
+                },
 
-                    attendanceSuccess();
+                function (decodedText) {
 
-                    scanner.stop();
+                    const expectedQR = seminarData[seminar.title].qr;
 
-                }else{
+                    if (decodedText === expectedQR) {
 
-                    alert("This QR Code is not valid for this seminar.");
+                        attendanceSuccess();
 
-                }
+                        html5QrCode.stop();
 
-            },
-            function(error){}
-        );
+                    } else {
 
-    }).catch(function(){
+                        alert("Invalid QR Code.");
 
-        document.getElementById("reader").innerHTML=
-        "<p class='text-danger'>Unable to access camera.</p>";
+                    }
+
+                },
+
+                function (error) {}
+
+            );
+
+        }
+
+    }).catch(() => {
+
+        document.getElementById("reader").innerHTML =
+            "<p class='text-danger'>Camera not available.</p>";
 
     });
 
 }
+
 //==========================================
 // COMPLETE ATTENDANCE
 //==========================================
-const completeBtn=document.getElementById("completeAttendance");
+const completeBtn = document.getElementById("completeAttendance");
 
-completeBtn.addEventListener("click",function(){
+completeBtn.addEventListener("click", () => {
 
-    if(!seminar){
+    if (!seminar) {
+
         alert("No seminar registration found.");
         return;
+
     }
 
-    if(codeTab.classList.contains("active")){
+    if (codeTab.classList.contains("active")) {
 
-        const input=document.getElementById("attendanceCode").value.trim();
+        const input = document.getElementById("attendanceCode").value.trim();
 
-        const expected=attendanceCodes[seminar.title];
+        const expectedCode = seminarData[seminar.title].code;
 
-        if(input===""){
-            alert("Please enter the attendance code.");
+        if (input === "") {
+
+            alert("Please enter attendance code.");
             return;
+
         }
 
-        if(input!==expected){
-            alert("Invalid attendance code.");
+        if (input !== expectedCode) {
+
+            alert("Invalid Attendance Code.");
             return;
+
         }
 
     }
@@ -147,20 +173,20 @@ completeBtn.addEventListener("click",function(){
 //==========================================
 // SUCCESS
 //==========================================
-function attendanceSuccess(){
+function attendanceSuccess() {
 
-    seminar.status="Attended";
+    seminar.status = "Attended";
 
-    registrations[registrations.length-1]=seminar;
+    registrations[registrations.length - 1] = seminar;
 
-    localStorage.setItem("registrations",JSON.stringify(registrations));
+    localStorage.setItem("registrations", JSON.stringify(registrations));
 
-    document.getElementById("attendanceStatus").textContent="Checked In";
-    document.getElementById("attendanceStatus").style.color="#16a34a";
+    document.getElementById("attendanceStatus").textContent = "Checked In";
+    document.getElementById("attendanceStatus").style.color = "#16a34a";
 
-    completeBtn.innerHTML='<i class="bi bi-check-circle-fill"></i> Attendance Completed';
+    completeBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Attendance Completed';
 
-    completeBtn.disabled=true;
+    completeBtn.disabled = true;
 
     alert("Attendance Successful!");
 

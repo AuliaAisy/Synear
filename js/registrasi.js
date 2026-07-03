@@ -45,31 +45,23 @@ document.getElementById("phone").value=localStorage.getItem("phone")||"";
 const form=document.getElementById("registrationForm");
 
 form.addEventListener("submit",function(e){
-
     e.preventDefault();
-
     const seminar={
-        title:title,
-        date:date,
-        price:price,
-        type:type,
-        status:"Registered"
-    };
-
+    title:title,
+    date:date,
+    price:price,
+    type:type,
+    location:params.get("location"),
+    speaker:params.get("speaker"),
+    image:params.get("image"),
+    status:"Registered"
+};
     let registrations=JSON.parse(localStorage.getItem("registrations"))||[];
-
     registrations.push(seminar);
-
     localStorage.setItem("registrations",JSON.stringify(registrations));
-
     if(type==="free"){
-
         window.location.href=`regis-success.html?title=${encodeURIComponent(title)}&date=${encodeURIComponent(date)}&price=${encodeURIComponent(price)}`;
-
     }else{
-
         window.location.href=`payment.html?title=${encodeURIComponent(title)}&date=${encodeURIComponent(date)}&price=${encodeURIComponent(price)}`;
-
     }
-
 });

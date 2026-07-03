@@ -57,50 +57,47 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <span class="detail-category">UI / UX DESIGN</span>
-                    <h1 class="detail-title">UI / UX Design Bootcamp 2026</h1>
-                    <p class="detail-description">Learn from industry experts through inspiring talks, practical insights, and real-world case studies.</p>
+                    <span class="detail-category" id="detailCategory"></span>
+                    <h1 class="detail-title" id="detailTitle"></h1>
+                    <p class="detail-description" id="detailDescription"></p>
                     <div class="detail-meta">
                         <div class="meta-item">
                             <i class="bx bx-calendar"></i>
                             <div>
                                 <small>Date</small>
-                                <h6>12 July 2026</h6>
+                                <h6 id="detailDate"></h6>
                             </div>
                         </div>
                         <div class="meta-item">
                             <i class="bx bx-time-five"></i>
                             <div>
                                 <small>Time</small>
-                                <h6>09.00 - 16.00 WIB</h6>
+                                <h6 id="detailTime"></h6>
                             </div>
                         </div>
                         <div class="meta-item">
                             <i class="bx bx-map"></i>
                             <div>
                                 <small>Location</small>
-                                <h6>Jakarta Convention Center</h6>
+                                <h6 id="detailLocation"></h6>
                             </div>
                         </div>
                         <div class="meta-item">
                             <i class="bx bx-group"></i>
                             <div>
                                 <small>Seats</small>
-                                <h6>250 Participants</h6>
+                                <h6 id="detailSeats"></h6>
                             </div>
                         </div>
                     </div>
                     <div class="price-box">
                         <div>
                             <small>Registration Fee</small>
-                            <h2>Free</h2>
+                            <h2 id="detailPrice"></h2>
                         </div>
                         <a href="#"
-                        class="btn btn-primary-custom register-btn"
-                        data-title="UI/UX Design Seminar"
-                        data-price="FREE"
-                        data-date="12 July 2026"
-                        data-type="free">
+                        id="registerBtn"
+                        class="btn btn-primary-custom">
                             Register Now
                         </a>
                     </div>
@@ -150,12 +147,12 @@
             <div class="speaker-card">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-4 text-center">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=80" class="img-fluid rounded-circle speaker-img" alt="">
+                        <img id="detailImage" src="" class="img-fluid" alt="Seminar">
                     </div>
                     <div class="col-lg-8">
-                        <h3>Michael Anderson</h3>
-                        <span>Senior Product Designer at Google</span>
-                        <p>Michael has more than 10 years of experience in Product Design and has worked with various international technology companies. He specializes in User Experience, Design Systems, and Product Strategy.</p>
+                        <h3 id="detailSpeaker"></h3>
+                        <span id="detailSpeakerJob"></span>
+                        <p id="detailSpeakerDesc"></p>
                         <div class="speaker-social">
                             <a href="#"><i class="bx bxl-linkedin"></i></a>
                             <a href="#"><i class="bx bxl-instagram"></i></a>
@@ -223,78 +220,24 @@
             <div class="section-heading text-center">
                 <span class="section-subtitle">BENEFITS</span>
                 <h2>Why You Should Join</h2>
-                <p>Get valuable knowledge, expand your network, and earn a verified certificate.</p>
+                <p>Discover the advantages you'll get by joining this seminar.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card">
-                        <i class="bx bx-certification"></i>
-                        <h5>Verified Certificate</h5>
-                        <p>Receive an official certificate after completing the seminar.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card">
-                        <i class="bx bx-book-open"></i>
-                        <h5>Learning Materials</h5>
-                        <p>Access presentation slides and additional learning resources.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card">
-                        <i class="bx bx-group"></i>
-                        <h5>Networking</h5>
-                        <p>Connect with professionals, mentors, and fellow participants.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card">
-                        <i class="bx bx-briefcase"></i>
-                        <h5>Career Insight</h5>
-                        <p>Learn practical skills and industry best practices directly from experts.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="row g-4" id="benefitList"></div>
         </div>
     </section>
 
-    <!--==========================================
-    FAQ
-    ===========================================-->
+<!--==========================================
+FAQ
+===========================================-->
     <section class="faq-section">
         <div class="container">
             <div class="section-heading text-center">
                 <span class="section-subtitle">FAQ</span>
                 <h2>Frequently Asked Questions</h2>
             </div>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">Will I receive a certificate?</button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Yes. Every participant who attends the seminar will receive a verified digital certificate.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Can beginners join this seminar?</button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Absolutely. This seminar is suitable for beginners, students, and professionals.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">Can I cancel my registration?</button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Yes. Please review our cancellation policy before requesting a refund.</div>
-                    </div>
-                </div>
-            </div>
+            <div class="accordion" id="faqAccordion"></div>
         </div>
-    </section>
+    </section>  
 
     <!--==========================================
     RELATED SEMINARS
@@ -308,9 +251,7 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="seminar-card">
-                        <div class="seminar-image">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80" class="img-fluid" alt="">
-                        </div>
+                        <img id="detailImage" src="" class="img-fluid" alt="Seminar">
                         <div class="seminar-content">
                             <h4>Digital Marketing Masterclass</h4>
                             <p>Learn SEO, social media strategy, and digital advertising.</p>

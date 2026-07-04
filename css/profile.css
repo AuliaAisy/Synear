@@ -1,0 +1,156 @@
+/*==========================================
+PROFILE SECTION
+==========================================*/
+.profile-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px 50px;
+    background:#f8faff;
+}
+
+.profile-card{
+    width:100%;
+    max-width:520px;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+/*==========================================
+PROFILE HEADER
+==========================================*/
+.profile-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.profile-avatar{
+    width:90px;
+    height:90px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    background:#5f7cf3;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    font-weight:700;
+}
+
+.profile-header h2{
+    font-size:28px;
+    font-weight:700;
+    color:#1d2438;
+    margin-bottom:6px;
+}
+
+.profile-header p{
+    font-size:15px;
+    color:#6b7280;
+    margin:0;
+}
+
+/*==========================================
+PROFILE INFO
+==========================================*/
+.profile-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.info-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 18px;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    background:#fafcff;
+}
+
+.info-item span{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.info-item strong{
+    color:#1d2438;
+    font-size:15px;
+    font-weight:600;
+}
+
+/*==========================================
+BUTTON
+==========================================*/
+.btn-login-main{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#5f7cf3;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-login-main:hover{
+    background:#4968ef;
+}
+
+.btn-outline-danger{
+    width:100%;
+    height:48px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+@media(max-width:576px){
+
+    .profile-card{
+        padding:25px;
+    }
+
+    .profile-avatar{
+        width:75px;
+        height:75px;
+        font-size:28px;
+    }
+
+    .profile-header h2{
+        font-size:24px;
+    }
+
+    .info-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:5px;
+    }
+
+}
+
+/*==========================================
+EDIT PROFILE
+==========================================*/
+.edit-form{
+    margin-top:25px;
+    padding-top:25px;
+    border-top:1px solid #e5e7eb;
+}
+
+.edit-form .form-control{
+    height:46px;
+    border-radius:10px;
+}
+
+.d-none{
+    display:none;
+}

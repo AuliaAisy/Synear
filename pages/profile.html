@@ -1,1 +1,93 @@
-seminar profile
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Synear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../asset/logo.png" class="logo-full" alt="Synear">
+            </a>
+            <a href="index.html" class="btn btn-outline-primary">
+                Back
+            </a>
+        </div>
+    </nav>
+    <section class="profile-section">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar" id="profileAvatar">
+                    A
+                </div>
+                <h2 id="profileName">
+                    Aurelia
+                </h2>
+                <p id="profileEmail">
+                    aurelia@email.com
+                </p>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <span>Full Name</span>
+                    <strong id="fullname"></strong>
+                </div>
+                <div class="info-item">
+                    <span>Email</span>
+                    <strong id="email"></strong>
+                </div>
+                <div class="info-item">
+                    <span>Phone Number</span>
+                    <strong id="phone"></strong>
+                </div>
+                <div class="info-item">
+                    <span>Institution</span>
+                    <strong id="institution"></strong>
+                </div>
+                <div class="info-item">
+                    <span>Occupation</span>
+                    <strong id="occupation"></strong>
+                </div>
+            </div>
+            <button class="btn btn-login-main w-100" id="editProfileBtn">
+    Edit Profile
+        </button>
+            <div id="editForm" class="edit-form d-none">
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="editFullname">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="editPhone">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Institution</label>
+                    <input type="text" class="form-control" id="editInstitution">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Occupation</label>
+                     <input type="text" class="form-control" id="editOccupation">
+            </div>
+                <button class="btn btn-success w-100" id="saveProfileBtn">
+           Save Changes
+                </button>
+        </div>
+        <button class="btn btn-outline-danger w-100 mt-3" id="logoutBtn">
+            Logout
+            </button>
+        </div>
+    </section>
+    <script src="../js/profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

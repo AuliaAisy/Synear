@@ -3,560 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synear | Professional Seminar Platform</title>
+    <title>Notifications | Synear</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- BOOTSTRAP CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- ==========================================
-         BOOTSTRAP ICON
-    =========================================== -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notif.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="../asset/logo.png" alt="logo" class="logo-full">
-            </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav mx-auto me-4">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
-                </ul>
-                <div class="d-flex align-items-center gap-3">
-                    <button class="btn btn-icon">
-                        <i class="bi bi-search"></i>
-                    </button>
-                    <button class="btn btn-icon position-relative">
-                        <i class="bi bi-bell"></i>
-                        <span class="notification-dot"></span>
-                    </button>
-                    <div id="authArea">
-                        <a href="login.html" class="btn btn-login">Login</a>
-                        <a href="register.html" class="btn btn-register">Register</a>
-                    </div>
-                </div>
-            </div>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="../asset/logo.png" class="logo-full">
+        </a>
+
+        <a href="index.html" class="btn btn-login-main">
+            Back Home
+        </a>
+    </div>
+</nav>
+
+<section class="notification-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="login-badge">
+                NOTIFICATIONS
+            </span>
+
+            <h2>
+                Latest Notifications
+            </h2>
+
+            <p>
+                Stay updated with your seminar registrations, attendance, certificates, and account activities.
+            </p>
+
         </div>
-    </nav>
-    <!--HERO SECTION Landing utama website -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center gy-5">
-                <div class="col-lg-6">
-                    <span class="hero-badge">
-                        <i class="bi bi-stars"></i>
-                        Trusted Professional Seminar Platform
+
+        <div id="notificationList">
+
+            <div class="notification-card">
+
+                <div class="notification-icon success">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+
+                <div class="notification-content">
+
+                    <h5>
+                        Registration Successful
+                    </h5>
+
+                    <p>
+                        You have successfully registered for UI/UX Design Seminar.
+                    </p>
+
+                    <span class="notification-time">
+                        2 minutes ago
                     </span>
-                    <h1 class="hero-title">
-                        Discover The Best
-                        <span>Professional Seminar</span>
-                        For Your Future.
-                    </h1>
-                    <p class="hero-description">
-                        Synear helps students and professionals discover inspiring seminars, workshops, webinars and conferences with verified certificates from trusted organizers.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="explore.html" class="btn btn-primary-custom">Explore Events</a>
-                        <a href="#" class="btn btn-outline-custom">Learn More</a>
-                    </div>
-                </div>
-                                <!-- Hero Right -->
-                <div class="col-lg-6">
-                    <div class="hero-illustration">
-                        <div class="hero-blob"></div>
-                        <img src="../asset/illustrasi.png" class="hero-vector" alt="Hero">
-                        <div class="floating-circle"></div>
-                        <div class="floating-square"></div>
-                        <div class="dot-pattern"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==========================================
-         WHY CHOOSE SYNEAR
-    =========================================== -->
 
-    <section class="why-section">
-        <div class="container">
-            <div class="section-heading text-center">
-                <span class="section-subtitle">WHY CHOOSE US</span>
-                <h2>Everything You Need In One Platform</h2>
-                <p>Discover seminars, register instantly and collect verified certificates.</p>
-            </div>
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4 d-flex">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-patch-check-fill"></i>
-                        </div>
-                        <h4>Verified Certificate</h4>
-                        <p>Every completed seminar provides an official certificate with QR verification.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="bi bi-person-video3"></i>
-                        </div>
-                        <h4>Professional Speakers</h4>
-                        <p>Learn directly from experienced mentors and industry practitioners.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="feature-card">
-
-                        <div class="feature-icon">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-
-                        <h4>Easy Registration</h4>
-
-                        <p>
-                            Register your favorite seminar in seconds with a modern experience.
-                        </p>
-
-                    </div>
                 </div>
 
             </div>
-        </div>
-    </section>
-    <!-- ==========================================
-        FEATURED EVENT
-    ========================================== -->
 
-    <section class="featured-section">
-        <div class="container">
-            <div class="section-heading text-center">
-                <span class="section-subtitle">FEATURED EVENT</span>
-                <h2>Most Popular Seminar This Week</h2>
-                <p>Discover our most popular seminar selected by thousands of participants.</p>
-            </div>
+            <div class="notification-card">
 
-            <div class="featured-event mt-5">
-                <div class="row align-items-center g-5">
-
-                    <div class="col-lg-6">
-                        <div class="featured-image">
-                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80" class="img-fluid" alt="Featured Event">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <h2 class="featured-title">UI / UX Design 2026</h2>
-                        <p class="featured-description">
-                            Create better digital experiences with UI/UX experts.</p>
-                        <div class="featured-information">
-                            <div class="featured-item">
-                                <i class="bi bi-calendar-event"></i>
-                                <div>
-                                    <small>Date</small>
-                                    <p>25 November 2026</p>
-                                </div>
-                            </div>
-
-                            <div class="featured-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <div>
-                                    <small>Location</small>
-                                    <p>Ruang Cinema Amikom</p>
-                                </div>
-                            </div>
-
-                            <div class="featured-item">
-                                <i class="bi bi-people"></i>
-                                <div>
-                                    <small>Participants</small>
-                                    <p>100 Seats</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="featured-footer">
-                            <div>
-                                <small>Starting From</small>
-                                <h3>Free</h3>
-                            </div>
-                            <a href="detail.html" class="btn btn-primary-custom">
-                                Register Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==========================================
-        TRENDING EVENTS
-    ========================================== -->
-
-    <section class="trending-section">
-        <div class="container">
-            <div class="section-heading text-center">
-                <span class="section-subtitle">TRENDING EVENTS</span>
-                <h2>Explore Popular Seminars</h2>
-                <p>Discover the most attended seminars this month.</p>
-            </div>
-
-            <div class="swiper trendingSwiper mt-5">
-                <div class="swiper-wrapper">
-
-                    <!-- Event Card 1 -->
-
-                    <div class="swiper-slide">
-                        <div class="seminar-card">
-                            <div class="seminar-image">
-                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&auto=format&fit=crop&q=80" class="img-fluid" alt="AI Seminar">
-                                <span class="seminar-badge">Best Seller</span>
-                                <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            </div>
-                            <div class="seminar-content">
-                                <span class="seminar-category">Technology</span>
-                                <h4>Future Of Artificial Intelligence</h4>
-                                <p>Discover AI trends directly from experts and industry practitioners.</p>
-                                <div class="seminar-meta">
-                                    <span><i class="bi bi-calendar3"></i>15 July 2026</span>
-                                    <span><i class="bi bi-geo-alt"></i>Jakarta</span>
-                                </div>
-                                <div class="seminar-footer">
-                                    <div>
-                                        <h5>Rp199.000</h5>
-                                        <small>⭐ 4.9</small>
-                                    </div>
-                                    <a href="detail.html" class="btn btn-primary-custom">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Card 2 -->
-
-                    <div class="swiper-slide">
-                        <div class="seminar-card">
-                            <div class="seminar-image">
-                                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=900&auto=format&fit=crop&q=80" class="img-fluid" alt="Design Seminar">
-                                <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            </div>
-
-                            <div class="seminar-content">
-                                <span class="seminar-category">Design</span>
-                                <h4>UI / UX Masterclass</h4>
-                                <p>Master modern interface design through real-world case studies.</p>
-
-                                <div class="seminar-meta">
-                                    <span><i class="bi bi-calendar3"></i>21 July 2026</span>
-                                    <span><i class="bi bi-geo-alt"></i>Bandung</span>
-                                </div>
-
-                                <div class="seminar-footer">
-                                    <div>
-                                        <h5>Rp149.000</h5>
-                                        <small>⭐ 4.8</small>
-                                    </div>
-                                    <a href="detail.html" class="btn btn-primary-custom">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Card 3 -->
-
-                    <div class="swiper-slide">
-                        <div class="seminar-card">
-                            <div class="seminar-image">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&auto=format&fit=crop&q=80" class="img-fluid" alt="Business Seminar">
-                                <span class="seminar-badge bg-success">New</span>
-                                <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            </div>
-
-                            <div class="seminar-content">
-                                <span class="seminar-category">Business</span>
-                                <h4>Startup Growth Summit</h4>
-                                <p>Learn business strategy directly from successful startup founders.</p>
-
-                                <div class="seminar-meta">
-                                    <span><i class="bi bi-calendar3"></i>28 July 2026</span>
-                                    <span><i class="bi bi-geo-alt"></i>Surabaya</span>
-                                </div>
-
-                                <div class="seminar-footer">
-                                    <div>
-                                        <h5>Rp179.000</h5>
-                                        <small>⭐ 5.0</small>
-                                    </div>
-                                    <a href="detail.html" class="btn btn-primary-custom">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="notification-icon info">
+                    <i class="bi bi-credit-card-fill"></i>
                 </div>
 
-                <div class="swiper-pagination"></div>
+                <div class="notification-content">
 
-            </div>
-        </div>
-    </section>
-    <!-- ==========================================
-        UPCOMING EVENTS
-    ========================================== -->
+                    <h5>
+                        Payment Confirmed
+                    </h5>
 
-    <section class="upcoming-section">
-        <div class="container">
-            <div class="section-heading text-center">
-                <span class="section-subtitle">UPCOMING EVENTS</span>
-                <h2>Don't Miss The Next Event</h2>
-                <p>Reserve your seat before registration closes.</p>
-                <div class="mt-3">
-                    <a href="explore.html" class="btn btn-outline-custom">
-                        View All
-                    </a>
-                </div>
-            </div>
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4 d-flex">
-                    <div class="upcoming-card w-100">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop&q=80" class="img-fluid" alt="Frontend">
-                        <div class="upcoming-content">
-                            <span class="seminar-category">Workshop</span>
-                            <h4>Modern Frontend Development</h4>
-                            <p>Learn HTML, CSS, Bootstrap and JavaScript from experienced frontend developers.</p>
-                            <div class="seminar-meta">
-                                <span><i class="bi bi-calendar3"></i>30 July 2026</span>
-                                <span><i class="bi bi-geo-alt"></i>Online</span>
-                            </div>
-                            <a href="detail.html" class="btn btn-primary-custom w-100 mt-4">Register</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-flex">
-                    <div class="upcoming-card w-100">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&auto=format&fit=crop&q=80" class="img-fluid" alt="Business">
-                        <div class="upcoming-content">
-                            <span class="seminar-category">Business</span>
-                            <h4>Entrepreneur Summit 2026</h4>
-                            <p>Meet successful founders and discover strategies to grow your business.</p>
-                            <div class="seminar-meta">
-                                <span><i class="bi bi-calendar3"></i>05 August 2026</span>
-                                <span><i class="bi bi-geo-alt"></i>Jakarta</span>
-                            </div>
-                            <a href="detail.html" class="btn btn-primary-custom w-100 mt-4">Register</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 d-flex">
-                    <div class="upcoming-card w-100">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&auto=format&fit=crop&q=80" class="img-fluid" alt="Cyber Security">
-                        <div class="upcoming-content">
-                            <span class="seminar-category">Technology</span>
-                            <h4>Cyber Security Conference</h4>
-                            <p>Discover the latest cyber security trends and digital protection strategies.</p>
-                            <div class="seminar-meta">
-                                <span><i class="bi bi-calendar3"></i>12 August 2026</span>
-                                <span><i class="bi bi-geo-alt"></i>Bandung</span>
-                            </div>
-                            <a href="detail.html" class="btn btn-primary-custom w-100 mt-4">Register</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ==========================================
-        TESTIMONIALS
-    ========================================== -->
-    <section class="testimonial-section">
-        <div class="container">
-            <div class="section-heading text-center">
-                <span class="section-subtitle">TESTIMONIALS</span>
-                <h2>What Our Participants Say</h2>
-                <p>Thousands of students and professionals have grown together with Synear.</p>
-            </div>
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="../asset/salsuy.jpeg" alt="User">
-                            <div>
-                                <h5>Salsabila Saphira</h5>
-                                <span>UI/UX Designer</span>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">
-                            Seminar yang tersedia selalu menarik dan pembicaranya berkualitas. Proses registrasinya juga simpel, jadi tinggal daftar dan ikut tanpa ribet.
-                        </p>
-                        <div class="testimonial-rating">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="../asset/rara.jpeg" alt="User">
-                            <div>
-                                <h5>Putri Zahra</h5>
-                                <span>Frontend Developer</span>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">
-                            Sering bingung cari seminar yang sesuai, tapi sejak pakai Synear semuanya jadi lebih gampang dan daftarnya cepat.
-                        </p>
-                        <div class="testimonial-rating">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="../asset/ucup.jpeg" alt="User">
-                            <div>
-                                <h5>Yusuf Maulana</h5>
-                                <span>Business Student</span>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">
-                            Aku suka banget sama tampilannya yang bersih dan modern. Sertifikatnya langsung bisa diakses setelah acara selesai.
-                        </p>
-                        <div class="testimonial-rating">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-        CALL TO ACTION
-    ========================================== -->
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-wrapper">
-                <div class="row align-items-center">
-
-                    <div class="col-lg-8">
-                        <span class="section-subtitle">START YOUR JOURNEY</span>
-                        <h2>Ready To Join Thousands Of Learners?</h2>
-                        <p>Register today and start discovering seminars from the best speakers across Indonesia.</p>
-                    </div>
-
-                    <div class="col-lg-4 text-lg-end">
-                        <a href="register.html" class="btn btn-primary-custom btn-lg">
-                            Get Started
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-        FOOTER
-    ========================================== -->
-
-    <footer class="footer">
-        <div class="container">
-
-            <div class="row gy-5">
-
-                <div class="col-lg-4">
-                    <a href="index.html" class="footer-logo">
-                        <div class="logo-circle">S</div>
-                        <span>Synear</span>
-                    </a>
-
-                    <p class="footer-description">
-                        Modern seminar platform designed to help students and professionals discover quality events and earn verified certificates.
+                    <p>
+                        Your payment has been successfully verified.
                     </p>
 
-                    <div class="footer-social">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <h5>Platform</h5>
-                    <ul class="footer-menu">
-                        <li><a href="../pages/index.html">Home</a></li>
-                        <li><a href="../pages/explore.html">Explore</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="certificates.html">Certificates</a></li>
-                    </ul>
-                </div>
+                    <span class="notification-time">
+                        1 hour ago
+                    </span>
 
-                <div class="col-lg-2">
-                    <h5>Support</h5>
-
-                    <ul class="footer-menu">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4">
-                    <h5>Newsletter</h5>
-
-                    <p>Get updates about upcoming seminars and exclusive events.</p>
-
-                    <div class="newsletter-box">
-                        <input type="email" class="form-control" placeholder="Enter your email">
-                        <button class="btn btn-primary-custom">Subscribe</button>
-                    </div>
                 </div>
 
             </div>
 
-            <hr>
+            <div class="notification-card">
 
-            <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
-                <p>© 2026 Synear. All Rights Reserved.</p>
-                <span>Designed with ❤️ by Synear Team.</span>
+                <div class="notification-icon warning">
+                    <i class="bi bi-alarm-fill"></i>
+                </div>
+
+                <div class="notification-content">
+
+                    <h5>
+                        Seminar Reminder
+                    </h5>
+
+                    <p>
+                        Don't forget! Your seminar starts tomorrow at 09.00 WIB.
+                    </p>
+
+                    <span class="notification-time">
+                        Yesterday
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="notification-card">
+
+                <div class="notification-icon certificate">
+                    <i class="bi bi-award-fill"></i>
+                </div>
+
+                <div class="notification-content">
+
+                    <h5>
+                        Certificate Available
+                    </h5>
+
+                    <p>
+                        Congratulations! Your seminar certificate is now available.
+                    </p>
+
+                    <span class="notification-time">
+                        Yesterday
+                    </span>
+
+                </div>
+
             </div>
 
         </div>
-    </footer>
-<!-- ==========================================
-     JAVASCRIPT
-========================================== -->
+
+    </div>
+
+</section>
+
+<script src="../js/notif.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../js/auth.js"></script>
+
 </body>
 </html>

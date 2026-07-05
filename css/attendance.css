@@ -56,7 +56,6 @@ SEMINAR BOX
     border:1px solid #e5e7eb;
     border-radius:14px;
     padding:18px;
-    margin-bottom:24px;
 }
 
 .seminar-box h5{
@@ -67,45 +66,142 @@ SEMINAR BOX
 }
 
 .seminar-box span{
-    color:#6b7280;
     font-size:14px;
+    color:#6b7280;
 }
 
 /*==========================================
-QR CODE
+ATTENDANCE NOTE
+==========================================*/
+.attendance-note{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:14px 16px;
+    margin:22px 0;
+    background:#eef5ff;
+    border:1px solid #dbeafe;
+    border-radius:12px;
+    text-align:left;
+}
+
+.attendance-note i{
+    font-size:18px;
+    color:#2563eb;
+    margin-top:2px;
+}
+
+.attendance-note span{
+    font-size:13px;
+    color:#475569;
+    line-height:1.6;
+}
+
+/*==========================================
+ATTENDANCE TAB
+==========================================*/
+.attendance-tab{
+    display:flex;
+    gap:6px;
+    padding:5px;
+    margin-bottom:25px;
+    background:#eef2ff;
+    border-radius:12px;
+}
+
+.tab-btn{
+    flex:1;
+    height:46px;
+    border:none;
+    border-radius:10px;
+    background:transparent;
+    font-size:14px;
+    font-weight:600;
+    color:#475569;
+    transition:.3s;
+}
+
+.tab-btn i{
+    margin-right:6px;
+}
+
+.tab-btn.active{
+    background:#5f7cf3;
+    color:#fff;
+}
+
+/*==========================================
+CONTENT
+==========================================*/
+.attendance-content{
+    min-height:260px;
+}
+
+#codeContent{
+    display:none;
+}
+
+/*==========================================
+QR
 ==========================================*/
 .qr-box{
     display:flex;
     justify-content:center;
-    margin:30px 0;
+    margin:20px 0;
 }
 
 #qrcode{
-    background:#fff;
     padding:18px;
+    background:#fff;
     border-radius:14px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/*==========================================
+CODE
+==========================================*/
+.attendance-code{
+    text-align:left;
+    margin-top:20px;
+}
+
+.attendance-code .form-label{
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.attendance-code .form-control{
+    height:48px;
+    border:1px solid #dbe3ff;
+    border-radius:10px;
+    box-shadow:none;
+}
+
+.attendance-code .form-control:focus{
+    border-color:#5f7cf3;
 }
 
 /*==========================================
 STATUS
 ==========================================*/
 .status-box{
+    margin:28px 0;
+    padding:16px;
     border:1px solid #e5e7eb;
     border-radius:14px;
-    padding:16px;
-    margin-bottom:24px;
 }
 
 .status-box span{
     display:block;
-    color:#6b7280;
-    font-size:13px;
     margin-bottom:6px;
+    font-size:13px;
+    color:#6b7280;
 }
 
 .status-box strong{
     font-size:18px;
+    font-weight:700;
     color:#ef4444;
 }
 
@@ -138,6 +234,14 @@ RESPONSIVE
 
     .attendance-card h2{
         font-size:24px;
+    }
+
+    .seminar-box h5{
+        font-size:18px;
+    }
+
+    .tab-btn{
+        font-size:13px;
     }
 
     #qrcode img{

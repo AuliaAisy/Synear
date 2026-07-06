@@ -124,4 +124,8 @@ resetBtn.addEventListener("click",function(){
 //==========================================
 // AUTO SEARCH FROM NAVBAR
 //==========================================
-updateResultCount();
+if(navbarKeyword){
+    filterEvents();
+}else{
+    updateResultCount();
+}

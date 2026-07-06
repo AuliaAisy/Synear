@@ -1,34 +1,63 @@
+/*==========================================
+NOTIFICATION
+==========================================*/
 .notification-section{
     min-height:100vh;
-    padding:120px 0 60px;
-    background:#f8faff;
+    padding:120px 0 70px;
+    background:#f7f9ff;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:38px;
+    font-weight:800;
+    color:#1d2438;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    font-size:16px;
+    color:#6b7280;
+}
+
+#notificationList{
+    max-width:850px;
+    margin:0 auto;
 }
 
 .notification-card{
     display:flex;
-    gap:18px;
     align-items:flex-start;
+    gap:18px;
     background:#fff;
-    padding:22px;
     border-radius:18px;
+    padding:20px 22px;
     margin-bottom:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
     transition:.3s;
 }
 
 .notification-card:hover{
     transform:translateY(-3px);
+    box-shadow:0 12px 28px rgba(0,0,0,.1);
 }
 
 .notification-icon{
-    width:55px;
-    height:55px;
+    width:56px;
+    height:56px;
+    min-width:56px;
     border-radius:50%;
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:24px;
-    flex-shrink:0;
+    justify-content:center;
+}
+
+.notification-icon i{
+    font-size:22px;
 }
 
 .notification-content{
@@ -36,14 +65,16 @@
 }
 
 .notification-content h5{
-    font-size:18px;
+    font-size:20px;
     font-weight:700;
     color:#1d2438;
     margin-bottom:6px;
 }
 
 .notification-content p{
+    font-size:15px;
     color:#6b7280;
+    line-height:1.6;
     margin-bottom:8px;
 }
 
@@ -52,22 +83,71 @@
     color:#94a3b8;
 }
 
-.success{
+/*==========================================
+ICON COLOR
+==========================================*/
+.notification-icon.success{
     background:#dcfce7;
     color:#16a34a;
 }
 
-.info{
+.notification-icon.info{
     background:#dbeafe;
     color:#2563eb;
 }
 
-.warning{
+.notification-icon.warning{
     background:#fef3c7;
     color:#d97706;
 }
 
-.certificate{
+.notification-icon.certificate{
     background:#ede9fe;
     color:#7c3aed;
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+@media(max-width:768px){
+
+    .notification-section{
+        padding:100px 15px 50px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .section-title p{
+        font-size:14px;
+    }
+
+    .notification-card{
+        padding:16px;
+        gap:14px;
+    }
+
+    .notification-icon{
+        width:48px;
+        height:48px;
+        min-width:48px;
+    }
+
+    .notification-icon i{
+        font-size:18px;
+    }
+
+    .notification-content h5{
+        font-size:17px;
+    }
+
+    .notification-content p{
+        font-size:14px;
+    }
+
+    .notification-time{
+        font-size:12px;
+    }
+
 }

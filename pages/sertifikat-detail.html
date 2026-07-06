@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Detail | Synear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sertifikat-detail.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../asset/logo.png" class="logo-full" alt="Synear">
+            </a>
+            <a href="sertifikat.html" class="btn btn-outline-primary">
+                Back
+            </a>
+        </div>
+    </nav>
+
+    <section class="certificate-detail-section">
+        <div class="certificate-paper" id="certificatePaper">
+            <img src="../asset/logo.png" class="certificate-logo" alt="Logo">
+            <span class="certificate-badge">SYNEAR CERTIFICATE</span>
+            <h1>Certificate of Attendance</h1>
+            <p class="certificate-subtitle">This certificate is proudly presented to</p>
+
+            <h2 id="certificateName">Participant</h2>
+
+            <p class="certificate-text">
+                For successfully participating in
+            </p>
+
+            <h3 id="certificateSeminar">
+                Seminar Name
+            </h3>
+
+            <p id="certificateDate">
+                12 July 2026
+            </p>
+
+            <div class="certificate-footer">
+                <div class="certificate-sign">
+                    <strong>Synear Team</strong>
+                    <span>Organizer</span>
+                </div>
+
+                <div class="certificate-id">
+                    Certificate ID
+                    <strong id="certificateId">
+                        SYN-2026-0001
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-login-main mt-4" id="downloadCertificate">
+            <i class="bi bi-download"></i>
+            Download PDF
+        </button>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../js/sertifikat-detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

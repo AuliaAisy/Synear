@@ -1,0 +1,249 @@
+/*==========================================
+CERTIFICATE DETAIL
+==========================================*/
+.certificate-detail-section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px 60px;
+    background:#f8faff;
+}
+
+.certificate-paper{
+    width:100%;
+    max-width:1000px;
+    background:#fff;
+    border:8px solid #f4c542;
+    border-radius:18px;
+    padding:40px;
+    box-sizing:border-box;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.certificate-paper::before{
+    content:"SYNEAR";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:150px;
+    font-weight:800;
+    color:rgba(95,124,243,.04);
+    pointer-events:none;
+    z-index:0;
+}
+
+/*==========================================
+LOGO
+==========================================*/
+.certificate-logo{
+    width:80px;
+    margin-bottom:18px;
+    position:relative;
+    z-index:1;
+}
+
+.certificate-badge{
+    display:inline-block;
+    padding:8px 20px;
+    background:#eef2ff;
+    color:#5f7cf3;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:18px;
+    position:relative;
+    z-index:1;
+}
+
+/*==========================================
+TITLE
+==========================================*/
+.certificate-paper h1{
+    font-size:42px;
+    font-weight:800;
+    color:#1d2438;
+    margin-bottom:10px;
+    position:relative;
+    z-index:1;
+}
+
+.certificate-subtitle{
+    font-size:18px;
+    color:#6b7280;
+    margin-bottom:28px;
+    position:relative;
+    z-index:1;
+}
+
+/*==========================================
+NAME
+==========================================*/
+#certificateName{
+    font-size:52px;
+    font-weight:800;
+    color:#5f7cf3;
+    margin-bottom:18px;
+    position:relative;
+    z-index:1;
+}
+
+.certificate-text{
+    font-size:18px;
+    color:#6b7280;
+    margin-bottom:12px;
+    position:relative;
+    z-index:1;
+}
+
+#certificateSeminar{
+    font-size:30px;
+    font-weight:700;
+    color:#1d2438;
+    margin-bottom:12px;
+    position:relative;
+    z-index:1;
+}
+
+#certificateDate{
+    font-size:18px;
+    color:#6b7280;
+    margin-bottom:55px;
+    position:relative;
+    z-index:1;
+}
+
+/*==========================================
+FOOTER
+==========================================*/
+.certificate-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:70px;
+    position:relative;
+    z-index:1;
+}
+
+.certificate-sign{
+    text-align:left;
+}
+
+.certificate-sign strong{
+    display:block;
+    font-size:20px;
+    color:#1d2438;
+}
+
+.certificate-sign span{
+    font-size:15px;
+    color:#6b7280;
+}
+
+.certificate-id{
+    text-align:right;
+    font-size:14px;
+    color:#6b7280;
+}
+
+.certificate-id strong{
+    display:block;
+    font-size:17px;
+    color:#1d2438;
+    margin-top:4px;
+}
+
+/*==========================================
+BUTTON
+==========================================*/
+.btn-login-main{
+    width:260px;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#5f7cf3;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-login-main:hover{
+    background:#4968ef;
+}
+
+/*==========================================
+PRINT
+==========================================*/
+@media print{
+
+    body{
+        background:#fff;
+    }
+
+    .navbar,
+    .btn-login-main{
+        display:none!important;
+    }
+
+    .certificate-detail-section{
+        padding:40px;
+        background:#f8faff;
+    }
+
+    .certificate-paper{
+        width:100%;
+        min-height:auto;
+        box-shadow:none;
+        margin:0;
+        border:8px solid #f4c542;
+    }
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+@media(max-width:1200px){
+
+    .certificate-paper{
+        width:100%;
+        min-height:auto;
+        padding:35px 25px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .certificate-paper h1{
+        font-size:30px;
+    }
+
+    #certificateName{
+        font-size:34px;
+    }
+
+    #certificateSeminar{
+        font-size:22px;
+    }
+
+    .certificate-footer{
+        flex-direction:column;
+        align-items:center;
+        gap:30px;
+    }
+
+    .certificate-sign,
+    .certificate-id{
+        text-align:center;
+    }
+
+    .btn-login-main{
+        width:100%;
+    }
+
+}

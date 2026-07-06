@@ -54,7 +54,7 @@ const seminarData = {
         qr: "SYNEAR-DM2026"
     },
 
-    "Cyber Security Seminar": {
+    "Cyber Security Conference": {
         code: "CYBER2026",
         qr: "SYNEAR-CYBER2026"
     },
@@ -66,9 +66,20 @@ const seminarData = {
 
 };
 
-if (registrations.length > 0) {
+const params = new URLSearchParams(window.location.search);
+const seminarTitle = params.get("title");
+
+if (seminarTitle) {
+
+    seminar = registrations.find(item => item.title === seminarTitle);
+
+} else if (registrations.length > 0) {
 
     seminar = registrations[registrations.length - 1];
+
+}
+
+if (seminar) {
 
     document.getElementById("seminarTitle").textContent = seminar.title;
     document.getElementById("seminarDate").textContent = seminar.date;

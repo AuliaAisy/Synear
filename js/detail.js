@@ -8,7 +8,7 @@ const id = params.get("id");
 //=========================================
 const seminars = {
     uiux:{
-        title:"UI / UX Design Bootcamp",
+        title:"UI/UX Design Seminar",
         category:"UI / UX DESIGN",
         description:"Learn from industry experts through inspiring talks, practical insights, and real-world case studies.",
         date:"12 July 2026",
@@ -19,8 +19,38 @@ const seminars = {
         speakerJob:"Senior Product Designer at Google",
         speakerDesc:"Michael has more than 10 years of experience in Product Design and has worked with various international technology companies. He specializes in User Experience, Design Systems, and Product Strategy.",
         image:"https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80",
-        price:149000,
-        type:"paid"
+        aboutTitle:"Build Your UI/UX Career With Industry Experts",
+        about1:"UI/UX Design Seminar 2026 is designed for students, fresh graduates, and professionals who want to master digital product design from scratch.",
+        about2:"Participants will gain practical knowledge in user research, wireframing, prototyping, design systems, usability testing, and portfolio preparation.",
+        schedule:[
+        {
+        time:"08.00",
+        title:"Registration",
+        desc:"Participant registration and welcome coffee."
+        },
+        {
+        time:"09.00",
+        title:"Opening Session",
+        desc:"Introduction and keynote presentation."
+        },
+        {
+        time:"10.30",
+        title:"UI/UX Workshop",
+        desc:"Hands-on design session using Figma."
+        },
+        {
+        time:"13.00",
+        title:"Case Study",
+        desc:"Analyze real projects from leading companies."
+        },
+        {
+        time:"15.30",
+        title:"Q&A Session",
+        desc:"Discussion with speakers and networking."
+        }
+        ],
+        price:0,
+        type:"free"
     },
     entrepreneur:{
         title:"Entrepreneur Summit 2026",
@@ -49,12 +79,42 @@ const seminars = {
         speakerJob:"Cyber Security Expert",
         speakerDesc:"David specializes in cyber defense, ethical hacking, and enterprise security with experience handling international security incidents.",
         image:"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80",
-        price:179000,
-        type:"paid"
+        aboutTitle:"Master Cyber Security From Industry Experts",
+        about1:"Cyber Security Conference discusses the latest digital threats and modern security solutions.",
+        about2:"Participants will learn ethical hacking, penetration testing, cyber defense, and incident response from experienced professionals.",
+        schedule:[
+        {
+        time:"08.30",
+        title:"Registration",
+        desc:"Participant check in."
+        },
+        {
+        time:"09.00",
+        title:"Cyber Threat Landscape",
+        desc:"Latest attack trends."
+        },
+        {
+        time:"11.00",
+        title:"Ethical Hacking Demo",
+        desc:"Live penetration testing."
+        },
+        {
+        time:"13.00",
+        title:"Incident Response",
+        desc:"Handling cyber attacks."
+        },
+        {
+        time:"15.00",
+        title:"Discussion",
+        desc:"Q&A with speaker."
+        }
+        ],
+        price:0,
+        type:"free"
     },
     digital:{
-        title:"Digital Marketing Workshop",
-        category:"WORKSHOP",
+        title:"Digital Marketing Seminar",
+        category:"Seminar",
         description:"Master SEO, social media marketing and paid advertising.",
         date:"20 July 2026",
         time:"09.00 - 15.00 WIB",
@@ -116,6 +176,24 @@ document.getElementById("detailSeats").textContent=seminar.seats;
 document.getElementById("detailSpeaker").textContent=seminar.speaker;
 document.getElementById("detailSpeakerJob").textContent=seminar.speakerJob;
 document.getElementById("detailSpeakerDesc").textContent=seminar.speakerDesc;
+document.getElementById("aboutTitle").textContent=seminar.aboutTitle;
+document.getElementById("aboutText1").textContent=seminar.about1;
+document.getElementById("aboutText2").textContent=seminar.about2;
+
+const schedule=document.getElementById("scheduleList");
+schedule.innerHTML="";
+seminar.schedule.forEach(item=>{
+schedule.innerHTML+=`
+<div class="schedule-item">
+<span>${item.time}</span>
+<div>
+<h5>${item.title}</h5>
+<p>${item.desc}</p>
+</div>
+</div>
+`;
+
+});
 
 const price=document.getElementById("detailPrice");
 
@@ -131,7 +209,7 @@ if(seminar.type==="free"){
 const registerBtn=document.getElementById("registerBtn");
 registerBtn.addEventListener("click",function(e){
     e.preventDefault();
-    const target=`registrasi.html?title=${encodeURIComponent(seminar.title)}&date=${encodeURIComponent(seminar.date)}&price=${encodeURIComponent(seminar.price)}&type=${encodeURIComponent(seminar.type)}&location=${encodeURIComponent(seminar.location)}&speaker=${encodeURIComponent(seminar.speaker)}&image=${encodeURIComponent(seminar.image)}`;
+    const target=`registrasi.html?id=${id}&title=${encodeURIComponent(seminar.title)}&date=${encodeURIComponent(seminar.date)}&price=${encodeURIComponent(seminar.price)}&type=${encodeURIComponent(seminar.type)}&location=${encodeURIComponent(seminar.location)}&speaker=${encodeURIComponent(seminar.speaker)}&image=${encodeURIComponent(seminar.image)}`;
     if(localStorage.getItem("isLogin")==="true"){
         window.location.href=target;
     }else{

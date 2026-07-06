@@ -28,7 +28,7 @@ if(registrations.length===0){
                 <img src="${item.image}" alt="${item.title}">
             </div>
             <div class="registration-content">
-                <span class="badge bg-success">
+                <span class="registration-status">
                     ${item.status}
                 </span>
                 <p class="registration-speaker">
@@ -61,10 +61,10 @@ if(registrations.length===0){
                     </strong>
                 </div>
                 <div class="registration-action">
-                    <a href="attendance.html" class="btn btn-login-main">
+                    <a href="attendance.html?id=${item.id}" class="btn btn-login-main">
                         Attendance
                     </a>
-                    <a href="detail.html" class="btn btn-outline-primary">
+                    <a href="detail.html?id=${item.id}" class="btn btn-outline-primary">
                         View Detail
                     </a>
                 </div>

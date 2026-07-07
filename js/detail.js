@@ -18,7 +18,7 @@ const seminars = {
         speaker:"Michael Anderson",
         speakerJob:"Senior Product Designer at Google",
         speakerDesc:"Michael has more than 10 years of experience in Product Design and has worked with various international technology companies. He specializes in User Experience, Design Systems, and Product Strategy.",
-        image:"https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80",
+        image:"../asset/uiux.jpg",
         aboutTitle:"Build Your UI/UX Career With Industry Experts",
         about1:"UI/UX Design Seminar 2026 is designed for students, fresh graduates, and professionals who want to master digital product design from scratch.",
         about2:"Participants will gain practical knowledge in user research, wireframing, prototyping, design systems, usability testing, and portfolio preparation.",
@@ -63,7 +63,37 @@ const seminars = {
         speaker:"Richard Tan",
         speakerJob:"Founder & CEO",
         speakerDesc:"Richard has successfully built several startups across Southeast Asia and actively mentors young entrepreneurs to develop sustainable businesses.",
-        image:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&auto=format&fit=crop&q=80",
+        image:"../asset/entrepreneur.jpg",
+        aboutTitle:"Build Your Startup With Successful Entrepreneurs",
+        about1:"Entrepreneur Summit focuses on startup development, innovation, business strategy, and leadership from experienced founders.",
+        about2:"Participants will learn how to validate ideas, attract investors, scale businesses, and overcome common startup challenges.",
+        schedule:[
+        {
+        time:"08.00",
+        title:"Registration",
+        desc:"Participant check in."
+        },
+        {
+        time:"09.00",
+        title:"Startup Mindset",
+        desc:"Building entrepreneurial thinking."
+        },
+        {
+        time:"10.30",
+        title:"Business Model",
+        desc:"Creating sustainable business."
+        },
+        {
+        time:"13.00",
+        title:"Funding Strategy",
+        desc:"How to attract investors."
+        },
+        {
+        time:"15.00",
+        title:"Founder Talk",
+        desc:"Sharing real experiences."
+        }
+        ],
         price:199000,
         type:"paid"
     },
@@ -78,7 +108,7 @@ const seminars = {
         speaker:"David Wilson",
         speakerJob:"Cyber Security Expert",
         speakerDesc:"David specializes in cyber defense, ethical hacking, and enterprise security with experience handling international security incidents.",
-        image:"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80",
+        image:"../asset/cyber.jpg",
         aboutTitle:"Master Cyber Security From Industry Experts",
         about1:"Cyber Security Conference discusses the latest digital threats and modern security solutions.",
         about2:"Participants will learn ethical hacking, penetration testing, cyber defense, and incident response from experienced professionals.",
@@ -123,7 +153,37 @@ const seminars = {
         speaker:"Sarah Johnson",
         speakerJob:"Digital Marketing Specialist",
         speakerDesc:"Sarah has helped more than 300 companies increase sales through SEO, content marketing, and paid advertising strategies.",
-        image:"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop&q=80",
+        image:"../asset/digitalmarketing.jpg",
+        aboutTitle:"Master Digital Marketing Strategies",
+        about1:"Digital Marketing Workshop explores modern online marketing strategies including SEO, content marketing, social media, and paid advertising.",
+        about2:"Participants will practice creating digital campaigns, optimizing business visibility, and measuring marketing performance effectively.",
+        schedule:[
+        {
+        time:"08.30",
+        title:"Registration",
+        desc:"Participant check in."
+        },
+        {
+        time:"09.00",
+        title:"SEO Fundamentals",
+        desc:"Improve website ranking."
+        },
+        {
+        time:"10.30",
+        title:"Social Media Strategy",
+        desc:"Build audience engagement."
+        },
+        {
+        time:"13.00",
+        title:"Google Ads",
+        desc:"Create paid campaigns."
+        },
+        {
+        time:"15.00",
+        title:"Campaign Evaluation",
+        desc:"Analyze marketing results."
+        }
+        ],
         price:129000,
         type:"paid"
     },
@@ -138,7 +198,37 @@ const seminars = {
         speaker:"Andrew Lee",
         speakerJob:"AI Engineer",
         speakerDesc:"Andrew focuses on Artificial Intelligence, Machine Learning, and Generative AI with over 12 years of industry experience.",
-        image:"https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop&q=80",
+        image:"../asset/ai.jpg",
+        aboutTitle:"Explore The Future Of Artificial Intelligence",
+        about1:"AI Future Conference discusses the latest innovations in Artificial Intelligence, Machine Learning, and Generative AI technologies.",
+        about2:"Participants will discover AI applications across industries, ethical considerations, automation, and future career opportunities.",
+        schedule:[
+        {
+        time:"09.00",
+        title:"Registration",
+        desc:"Participant check in."
+        },
+        {
+        time:"10.00",
+        title:"Future of AI",
+        desc:"Industry trends."
+        },
+        {
+        time:"11.30",
+        title:"Machine Learning",
+        desc:"Core AI concepts."
+        },
+        {
+        time:"13.30",
+        title:"Generative AI",
+        desc:"Practical demonstrations."
+        },
+        {
+        time:"15.30",
+        title:"Panel Discussion",
+        desc:"Experts Q&A session."
+        }
+        ],
         price:249000,
         type:"paid"
     },
@@ -153,7 +243,37 @@ const seminars = {
         speaker:"Lisa Brown",
         speakerJob:"Communication Coach",
         speakerDesc:"Lisa has trained thousands of professionals to improve public speaking confidence, leadership communication, and presentation skills.",
-        image:"https://images.unsplash.com/photo-1515169067868-5387ec356754?w=1200&auto=format&fit=crop&q=80",
+        image:"../asset/publickspeaking.jpg",
+        aboutTitle:"Become A Confident Public Speaker",
+        about1:"Public Speaking Class helps participants improve communication, presentation, and leadership skills through practical speaking exercises.",
+        about2:"Participants will learn storytelling techniques, persuasive communication, audience engagement, and confidence-building methods.",
+        schedule:[
+        {
+        time:"08.30",
+        title:"Registration",
+        desc:"Participant check in."
+        },
+        {
+        time:"09.00",
+        title:"Communication Basics",
+        desc:"Speaking with confidence."
+        },
+        {
+        time:"10.30",
+        title:"Storytelling",
+        desc:"Deliver impactful messages."
+        },
+        {
+        time:"12.30",
+        title:"Presentation Practice",
+        desc:"Interactive speaking session."
+        },
+        {
+        time:"14.00",
+        title:"Feedback & Closing",
+        desc:"Evaluation and discussion."
+        }
+        ],
         price:99000,
         type:"paid"
     }

@@ -753,14 +753,20 @@ PROFILE NAVBAR
     padding:90px 0 30px;
 }
 
+/*==========================================
+FOOTER LOGO
+==========================================*/
 .footer-logo{
     display:flex;
     align-items:center;
-    gap:14px;
-    color:#fff;
-    font-size:28px;
-    font-weight:800;
+    gap:16px;
     margin-bottom:24px;
+}
+
+.footer-logo img{
+    width:145px;
+    height:auto;
+    display:block;
 }
 
 .footer-description{

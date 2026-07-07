@@ -1,3 +1,4 @@
+console.log("APP.JS LOADED");
 const authArea=document.getElementById("authArea");
 
 if(localStorage.getItem("isLogin")==="true"){
@@ -28,3 +29,26 @@ if(localStorage.getItem("isLogin")==="true"){
     };
 
 }
+
+//==========================================
+// TRENDING SWIPER
+//==========================================
+new Swiper(".trendingSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+
+    breakpoints: {
+        768: {
+            slidesPerView: 2
+        },
+        1200: {
+            slidesPerView: 3
+        }
+    }
+});

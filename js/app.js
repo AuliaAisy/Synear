@@ -13,7 +13,7 @@ if(localStorage.getItem("isLogin")==="true"){
             <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                 <li><a class="dropdown-item" href="sertifikat.html">Certificates</a></li>
-                <li><a class="dropdown-item" href="notif.html">Notifications</a></li>
+                <li><a class="dropdown-item" href="../pages/notif.html">Notifications</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item text-danger" href="#" id="logoutBtn">Logout</a></li>
             </ul>

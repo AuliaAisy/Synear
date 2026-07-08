@@ -121,6 +121,22 @@ EMPTY STATE
     margin-bottom:25px;
 }
 
+.btn-outline-primary{
+    background:#5f7cf3;
+    border:1px solid #5f7cf3;
+    color:#fff;
+    border-radius:12px;
+    padding:10px 22px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-outline-primary:hover{
+    background:#4968ef;
+    border-color:#4968ef;
+    color:#fff;
+}
+
 /*==========================================
 RESPONSIVE
 ==========================================*/

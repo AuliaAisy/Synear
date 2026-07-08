@@ -10,6 +10,12 @@ DETAIL HERO
     border-radius:28px;
     box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
+#detailImage{
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
 .detail-image img{
     width:100%;
     height:520px;

@@ -3,6 +3,8 @@
 //=========================================
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
+
+console.log("ID =", id);
 //=========================================
 // DATABASE SEMIAR
 //=========================================
@@ -15,10 +17,11 @@ const seminars = {
         time:"09.00 - 16.00 WIB",
         location:"Jakarta Convention Center",
         seats:"250 Participants",
-        speaker:"Michael Anderson",
+        speaker:"Aisy Lima",
         speakerJob:"Senior Product Designer at Google",
-        speakerDesc:"Michael has more than 10 years of experience in Product Design and has worked with various international technology companies. He specializes in User Experience, Design Systems, and Product Strategy.",
+        speakerDesc:"Aisy has more than 10 years of experience in Product Design and has worked with various international technology companies. He specializes in User Experience, Design Systems, and Product Strategy.",
         image:"../asset/uiux.jpg",
+        speakerImage:"../asset/adriana.jpg",
         aboutTitle:"Build Your UI/UX Career With Industry Experts",
         about1:"UI/UX Design Seminar 2026 is designed for students, fresh graduates, and professionals who want to master digital product design from scratch.",
         about2:"Participants will gain practical knowledge in user research, wireframing, prototyping, design systems, usability testing, and portfolio preparation.",
@@ -60,10 +63,11 @@ const seminars = {
         time:"09.00 - 16.00 WIB",
         location:"Bandung",
         seats:"300 Participants",
-        speaker:"Richard Tan",
+        speaker:"Anggun Elishabet",
         speakerJob:"Founder & CEO",
-        speakerDesc:"Richard has successfully built several startups across Southeast Asia and actively mentors young entrepreneurs to develop sustainable businesses.",
+        speakerDesc:"Anggun has successfully built several startups across Southeast Asia and actively mentors young entrepreneurs to develop sustainable businesses.",
         image:"../asset/entrepreneur.jpg",
+        speakerImage:"../asset/nikii.jpg",
         aboutTitle:"Build Your Startup With Successful Entrepreneurs",
         about1:"Entrepreneur Summit focuses on startup development, innovation, business strategy, and leadership from experienced founders.",
         about2:"Participants will learn how to validate ideas, attract investors, scale businesses, and overcome common startup challenges.",
@@ -105,10 +109,11 @@ const seminars = {
         time:"08.30 - 15.30 WIB",
         location:"Surabaya",
         seats:"350 Participants",
-        speaker:"David Wilson",
+        speaker:"El Raja Iblis",
         speakerJob:"Cyber Security Expert",
-        speakerDesc:"David specializes in cyber defense, ethical hacking, and enterprise security with experience handling international security incidents.",
+        speakerDesc:"El specializes in cyber defense, ethical hacking, and enterprise security with experience handling international security incidents.",
         image:"../asset/cyber.jpg",
+        speakerImage:"../asset/justin.jpg",
         aboutTitle:"Master Cyber Security From Industry Experts",
         about1:"Cyber Security Conference discusses the latest digital threats and modern security solutions.",
         about2:"Participants will learn ethical hacking, penetration testing, cyber defense, and incident response from experienced professionals.",
@@ -150,9 +155,10 @@ const seminars = {
         time:"09.00 - 15.00 WIB",
         location:"Online",
         seats:"Unlimited",
-        speaker:"Sarah Johnson",
+        speaker:"Aurel Django",
+        speakerImage:"../asset/olivia.jpg",
         speakerJob:"Digital Marketing Specialist",
-        speakerDesc:"Sarah has helped more than 300 companies increase sales through SEO, content marketing, and paid advertising strategies.",
+        speakerDesc:"Aurel has helped more than 300 companies increase sales through SEO, content marketing, and paid advertising strategies.",
         image:"../asset/digitalmarketing.jpg",
         aboutTitle:"Master Digital Marketing Strategies",
         about1:"Digital Marketing Workshop explores modern online marketing strategies including SEO, content marketing, social media, and paid advertising.",
@@ -195,10 +201,11 @@ const seminars = {
         time:"10.00 - 16.00 WIB",
         location:"Jakarta",
         seats:"400 Participants",
-        speaker:"Andrew Lee",
+        speaker:"Joshua Enrico",
         speakerJob:"AI Engineer",
-        speakerDesc:"Andrew focuses on Artificial Intelligence, Machine Learning, and Generative AI with over 12 years of industry experience.",
+        speakerDesc:"Enrico focuses on Artificial Intelligence, Machine Learning, and Generative AI with over 12 years of industry experience.",
         image:"../asset/ai.jpg",
+        speakerImage:"../asset/davd.jpg",
         aboutTitle:"Explore The Future Of Artificial Intelligence",
         about1:"AI Future Conference discusses the latest innovations in Artificial Intelligence, Machine Learning, and Generative AI technologies.",
         about2:"Participants will discover AI applications across industries, ethical considerations, automation, and future career opportunities.",
@@ -240,10 +247,11 @@ const seminars = {
         time:"09.00 - 14.00 WIB",
         location:"Yogyakarta",
         seats:"200 Participants",
-        speaker:"Lisa Brown",
+        speaker:"Endah Red",
         speakerJob:"Communication Coach",
-        speakerDesc:"Lisa has trained thousands of professionals to improve public speaking confidence, leadership communication, and presentation skills.",
+        speakerDesc:"Endah has trained thousands of professionals to improve public speaking confidence, leadership communication, and presentation skills.",
         image:"../asset/publickspeaking.jpg",
+        speakerImage:"../asset/sabrina.jpg",
         aboutTitle:"Become A Confident Public Speaker",
         about1:"Public Speaking Class helps participants improve communication, presentation, and leadership skills through practical speaking exercises.",
         about2:"Participants will learn storytelling techniques, persuasive communication, audience engagement, and confidence-building methods.",
@@ -279,13 +287,18 @@ const seminars = {
     }
 };
 const seminar = seminars[id];
+
+console.log("ID =", id);
+console.log("Seminar =", seminars[id]);
+console.log(seminar.image); 
 //==========================================
 // LOAD DATA
 //==========================================
 if(!seminar){
     window.location.href="explore.html";
 }
-document.getElementById("detailImage").src=seminar.image;
+document.getElementById("heroImage").src = seminar.image;
+document.getElementById("detailImage").src = seminar.speakerImage;
 document.getElementById("detailCategory").textContent=seminar.category;
 document.getElementById("detailTitle").textContent=seminar.title;
 document.getElementById("detailDescription").textContent=seminar.description;
